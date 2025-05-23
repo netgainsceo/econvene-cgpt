@@ -1,7 +1,7 @@
-// backend/src/hooks/userSignup.ts
 import { Pool } from 'pg';
 const db = new Pool();
 
+// Call this from a Supabase Edge Function or webhook
 export async function assignDefaultRooms(userId: string) {
   const defaultRooms = ['room1'];
   for (const room of defaultRooms) {
